@@ -1,0 +1,21 @@
+;socket
+        Param  			Value
+EAX  =  socket 			359
+EBX  =  domain AF_INET  	2
+ECX  =  Type   SOCK_STREAM 	1	
+EDX  =  Protocol TCP            6
+
+;;Bind
+EAX  = socketcall		102
+EBX  = bind			2
+ECX  = 
+
+domain
+
+
+struct sockaddr_in {
+   sa_family_t    sin_family; /* address family: AF_INET */
+   in_port_t      sin_port;   /* port in network byte order */
+   struct in_addr sin_addr;   /* internet address */
+};
+

